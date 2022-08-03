@@ -1,6 +1,6 @@
 import { SimpleGrid, Spinner, Flex, Heading, Box } from "@chakra-ui/react";
 import ProductCard from "../../Components/ProductCard";
-import BannerHome from "./bannerHome";
+import BannerHome from "./BannerHome";
 
 import useGet from "../../Hooks/useGet";
 
