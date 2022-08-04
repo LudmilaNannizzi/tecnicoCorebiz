@@ -11,9 +11,10 @@ import { useState } from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import { object, string } from "yup";
+import axios from "axios";
 const userSchema = object({
-  email: string().email().required("Debe ingresar su edad "),
-  name: string().required("Debe ingresar su Nombre "),
+  email: string().email().required("Debe ingresar su email "),
+  name: string().required("Debe ingresar su nombre "),
 });
 
 const Newsletter = () => {
@@ -71,10 +72,12 @@ const Newsletter = () => {
           </FormControl>
           <Button
             bgColor="black"
+            _hover={{ bgColor: "#F8475F" }}
             color="white"
             w="140px"
             borderRadius="0"
             isLoading={isSubmitting}
+            type="submit"
           >
             Suscribirme
           </Button>
